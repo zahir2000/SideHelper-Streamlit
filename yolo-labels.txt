@@ -1,0 +1,10 @@
+Person
+Firehydrant
+Trash can
+Bicycle
+Car
+Pole
+Motorcycle
+Cone
+Dog
+Pothole
