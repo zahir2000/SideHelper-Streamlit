@@ -3,8 +3,4 @@ pandas
 streamlit
 tensorflow==2.8.2
 numpy
-cv2
-time
-re
-glob
 PIL
