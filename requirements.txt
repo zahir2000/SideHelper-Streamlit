@@ -3,7 +3,6 @@ pandas
 streamlit
 tensorflow==2.8.2
 numpy
-os
 cv2
 time
 re
