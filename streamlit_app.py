@@ -3,7 +3,6 @@ from PIL import Image, ImageDraw, ImageFont
 import re, glob
 from six import BytesIO
 import numpy as np
-import cv2
 import tensorflow as tf
 import time
 import statistics
