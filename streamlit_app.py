@@ -6,6 +6,7 @@ import numpy as np
 import tensorflow as tf
 import time
 import statistics
+import glob
 
 """
 # SideHelper Demo
@@ -147,8 +148,8 @@ def detect_objects(interpreter, image, threshold, image_path = ""):
 
 input_mean = 127.5
 input_std = 127.5
-path_to_images = "./images/"
-files = os.listdir(path_to_images)
+path_to_images = "./images/*"
+#files = os.listdir(path_to_images)
 
 with st.sidebar:
     st.markdown("<b style='color:#FF4B4B; font-size: large;'>Options:</b>", unsafe_allow_html=True)
@@ -191,9 +192,11 @@ if uploaded_files is not None:
         my_bar = st.progress(0)
 
         if not uploaded_files:
-            for j, image_path in enumerate(files):
-                print(image_path)
-                uploaded_files.append(path_to_images + image_path)
+            pathlist = glob.iglob('./images/*.jpg')
+            #for j, image_path in enumerate(Path(path_to_images).glob('**/*.jpg')):
+            for path in pathlist:
+                #print(str(path))
+                uploaded_files.append(path)
 
         print(uploaded_files)
 
