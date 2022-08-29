@@ -181,8 +181,9 @@ labels = load_labels('./utils/efficientdet-labels.txt')
 
 if option in efficientdet:
     with st.spinner("Loading model..."):
+        model_path = "./utils/" + option.lower() + ".tflite"
         interpreter = tf.lite.Interpreter(
-            model_path="./utils/" + option.lower() + ".tflite")
+            model_path=model_path)
         interpreter.allocate_tensors()
         _, input_height, input_width, _ = interpreter.get_input_details()[0]['shape']
 
